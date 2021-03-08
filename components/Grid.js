@@ -3,9 +3,15 @@ import React from 'react';
 
 export default class Grid extends React.Component {
 
+
+  static defaultProps = {
+    numColumns: 4,
+    itemMargin: StyleSheet.hairlineWidth,
+  };
+
   renderGridItem = (info) => {
     const { index } = info;
-    const { numColumns, itemMargin, renderItem } = this.props;
+    const { renderItem, numColumns, itemMargin } = this.props;
 
     const { width } = Dimensions.get('window');
 

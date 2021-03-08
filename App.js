@@ -102,6 +102,14 @@ export default class App extends React.Component {
     }
   };
 
+  handlePressImage = (uri) => {
+    const { messages } = this.state;
+
+    this.setState({
+      messages: [createImageMessage(uri), ...messages],
+    });
+  };
+
   renderMessageList() {
     const { messages } = this.state;
 
@@ -115,13 +123,11 @@ export default class App extends React.Component {
     );
   }
 
-  renderInputMethodEditor() {
-    return (
+  renderInputMethodEditor = () => (
       <View style={styles.inputMethodEditor}>
-        <ImageGrid />
+        <ImageGrid onPressImage={this.handlePressImage}/>
       </View>
-    );
-  }
+  );
 
   renderToolBar() {
     const { isInputFocused } = this.state;

@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@react-native-community/netinfo": "5.9.7",
-    "expo": "~40.0.0",
+    "expo": "^40.0.1",
     "expo-cameraroll": "^1.1.0",
     "expo-constants": "~9.3.3",
     "expo-media-library": "~10.0.0",
